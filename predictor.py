@@ -62,7 +62,7 @@ Do NOT include markdown.
 """
 
     try:
-        model = genai.GenerativeModel("gemini-1.5-flash")
+        model = genai.GenerativeModel("gemini-2.5-flash")
 
         response = model.generate_content(
             prompt,
