@@ -7,9 +7,7 @@ from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.lib.units import inch
 
-# =====================================
 # PDF GENERATION
-# =====================================
 
 def create_pdf(result):
 
@@ -79,9 +77,7 @@ if submitted:
         st.markdown("### ⚠ Potential Risks")
         st.error(result["risks"])
 
-        # =============================
         # HYBRID SUCCESS FORECAST
-        # =============================
 
         st.markdown("---")
         st.subheader("🎯 Hybrid Success Forecast")
@@ -97,9 +93,7 @@ if submitted:
         st.markdown("#### Score Breakdown")
         st.json(result["score_breakdown"])
 
-        # =============================
-        # Growth Graph (Smaller)
-        # =============================
+        # Growth Graph 
 
         st.markdown("---")
         st.subheader("📈 10-Year Growth Projection")
@@ -116,9 +110,7 @@ if submitted:
 
         st.pyplot(fig)
 
-        # =============================
         # Career Path
-        # =============================
 
         st.markdown("---")
         st.subheader("🛤 Suggested Career Path")
@@ -130,9 +122,7 @@ if submitted:
         st.markdown("### 🏢 Industry Compatibility")
         st.json(result["industry_fit"])
 
-        # =============================
-        # Feature Importance (Smaller)
-        # =============================
+        # Feature Importance 
 
         st.markdown("---")
         st.subheader("🔍 ML Feature Importance")
@@ -149,17 +139,13 @@ if submitted:
 
         st.pyplot(fig2)
 
-        # =============================
         # Future Letter
-        # =============================
 
         st.markdown("---")
         st.subheader("📜 Letter from Your Future Self")
         st.write(result["future_letter"])
 
-        # =============================
         # PDF Download
-        # =============================
 
         pdf_file = create_pdf(result)
 
