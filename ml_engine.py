@@ -1,11 +1,6 @@
-# ml_engine.py
-
 import numpy as np
 
-
-# ==================================================
 # RULE-BASED SUCCESS SCORING ENGINE
-# ==================================================
 
 def calculate_success_score(daily_hours, skills, habits, personality_scores):
 
@@ -37,10 +32,7 @@ def calculate_success_score(daily_hours, skills, habits, personality_scores):
         "Personality Score": int(personality_score * 30),
     }
 
-
-# ==================================================
 # CAREER RECOMMENDATION ENGINE
-# ==================================================
 
 def recommend_career(personality_scores):
 
@@ -58,10 +50,7 @@ def recommend_career(personality_scores):
 
     return "Technology Professional"
 
-
-# ==================================================
 # INDUSTRY COMPATIBILITY ENGINE
-# ==================================================
 
 def industry_comparison(personality_scores):
 
