@@ -7,9 +7,7 @@ from sklearn.preprocessing import OneHotEncoder
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 
-# ----------------------------------
-# Generate Synthetic Dataset
-# ----------------------------------
+# Generate Dataset
 
 np.random.seed(42)
 
@@ -37,9 +35,7 @@ data["success_probability"] = (
     np.random.normal(0, 10, n_samples)
 ).clip(0, 100)
 
-# ----------------------------------
 # ML Pipeline
-# ----------------------------------
 
 X = data.drop("success_probability", axis=1)
 y = data["success_probability"]
